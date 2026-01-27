@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PONG</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            background: #000 !important;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        #gameCanvas {
+            display: block;
+            background: #000;
+            outline: none;
+            border: 1px solid #fff;
+        }
+
+        .back-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: #fff;
+            text-decoration: none;
+            font-family: monospace;
+            font-size: 16px;
+            padding: 5px 10px;
+            border: 1px solid #fff;
+            background: #000;
+            transition: all 0.3s;
+            z-index: 100;
+        }
+
+        .back-btn:hover {
+            background: #fff;
+            color: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="/" class="back-btn">&lt; 返回</a>
+    <canvas id="gameCanvas" width="800" height="600"></canvas>
+
+    <script>
+        const canvas = document.getElementById('gameCanvas');
+        const ctx = canvas.getContext('2d');
+
+        // 游戏对象
+        const paddle = {
+            width: 10,
+            height: 80,
+            x: 20,
+            y: canvas.height / 2 - 40
+        };
+
+        const aiPaddle = {
+            width: 10,
+            height: 80,
+            x: canvas.width - 30,
+            y: canvas.height / 2 - 40,
+            speed: 8
+        };
+
+        const ball = {
+            x: canvas.width / 2,
+            y: canvas.height / 2,
+            radius: 6,
+            speedX: 9,
+            speedY: 9
+        };
+
+        let score = {
+            player: 0,
+            ai: 0
+        };
+
+        let mouseY = canvas.height / 2;
+
+        // 音效系统 (Web Audio API)
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+
+        function playSound(freq, type = 'square', duration = 0.1) {
+            if (audioCtx.state === 'suspended') {
+                audioCtx.resume();
+            }
+            const osc = audioCtx.createOscillator();
+            const gain = audioCtx.createGain();
+
+            osc.type = type;
+            osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+
+            gain.gain.setValueAtTime(0.1, audioCtx.currentTime);
+            gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + duration);
+
+            osc.connect(gain);
+            gain.connect(audioCtx.destination);
+
+            osc.start();
+            osc.stop(audioCtx.currentTime + duration);
+        }
+
+        // 鼠标移动
+        canvas.addEventListener('mousemove', (e) => {
+            if (audioCtx.state === 'suspended') audioCtx.resume();
+            const rect = canvas.getBoundingClientRect();
+            mouseY = e.clientY - rect.top;
+        });
+
+        function resetBall() {
+            ball.x = canvas.width / 2;
+            ball.y = canvas.height / 2;
+            ball.speedX = 9 * (Math.random() > 0.5 ? 1 : -1);
+            ball.speedY = 9 * (Math.random() * 0.6 + 0.4) * (Math.random() > 0.5 ? 1 : -1);
+        }
+
+        function update() {
+            // 玩家挡板跟随鼠标
+            const targetY = mouseY - paddle.height / 2;
+            paddle.y = Math.max(0, Math.min(canvas.height - paddle.height, targetY));
+
+            // AI 挡板（高难度：快速反应 + 预判）
+            const aiTarget = ball.y - aiPaddle.height / 2;
+
+            if (ball.speedX > 0) {
+                const diff = aiTarget - aiPaddle.y;
+                if (Math.abs(diff) > 3) {
+                    aiPaddle.y += Math.sign(diff) * aiPaddle.speed * 0.98;
+                }
+            }
+
+            aiPaddle.y = Math.max(0, Math.min(canvas.height - aiPaddle.height, aiPaddle.y));
+
+            // 更新球位置
+            ball.x += ball.speedX;
+            ball.y += ball.speedY;
+
+            // 球与上下边界碰撞
+            if (ball.y - ball.radius < 0 || ball.y + ball.radius > canvas.height) {
+                ball.speedY = -ball.speedY;
+                playSound(400, 'square', 0.05); // 撞墙声
+            }
+
+            // 球与玩家挡板碰撞
+            if (ball.x - ball.radius < paddle.x + paddle.width &&
+                ball.y > paddle.y &&
+                ball.y < paddle.y + paddle.height &&
+                ball.speedX < 0) {
+                ball.speedX = -ball.speedX * 1.08;
+                const hitPos = (ball.y - (paddle.y + paddle.height / 2)) / (paddle.height / 2);
+                ball.speedY = hitPos * Math.abs(ball.speedX) * 0.7;
+                playSound(600, 'square', 0.1); // 接球声
+            }
+
+            // 球与 AI 挡板碰撞
+            if (ball.x + ball.radius > aiPaddle.x &&
+                ball.y > aiPaddle.y &&
+                ball.y < aiPaddle.y + aiPaddle.height &&
+                ball.speedX > 0) {
+                ball.speedX = -ball.speedX * 1.08;
+                const hitPos = (ball.y - (aiPaddle.y + aiPaddle.height / 2)) / (aiPaddle.height / 2);
+                ball.speedY = hitPos * Math.abs(ball.speedX) * 0.7;
+                playSound(600, 'square', 0.1); // 接球声
+            }
+
+            // 得分检测 - 自动重置
+            if (ball.x - ball.radius < 0) {
+                score.ai++;
+                playSound(200, 'sawtooth', 0.3); // 丢分声
+                resetBall();
+            }
+
+            if (ball.x + ball.radius > canvas.width) {
+                score.player++;
+                playSound(800, 'sine', 0.2); // 得分声
+                resetBall();
+            }
+        }
+
+        function draw() {
+            // 清空画布
+            ctx.fillStyle = '#000';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            // 绘制中线
+            ctx.strokeStyle = '#333';
+            ctx.lineWidth = 2;
+            ctx.setLineDash([15, 15]);
+            ctx.beginPath();
+            ctx.moveTo(canvas.width / 2, 0);
+            ctx.lineTo(canvas.width / 2, canvas.height);
+            ctx.stroke();
+            ctx.setLineDash([]);
+
+            // 绘制分数
+            ctx.fillStyle = '#444';
+            ctx.font = 'bold 48px monospace';
+            ctx.textAlign = 'center';
+            ctx.fillText(score.player, canvas.width / 4, 60);
+            ctx.fillText(score.ai, canvas.width * 3 / 4, 60);
+
+            // 绘制挡板
+            ctx.fillStyle = '#fff';
+            ctx.fillRect(paddle.x, paddle.y, paddle.width, paddle.height);
+            ctx.fillRect(aiPaddle.x, aiPaddle.y, aiPaddle.width, aiPaddle.height);
+
+            // 绘制球
+            ctx.beginPath();
+            ctx.arc(ball.x, ball.y, ball.radius, 0, Math.PI * 2);
+            ctx.fill();
+        }
+
+        function gameLoop() {
+            update();
+            draw();
+            requestAnimationFrame(gameLoop);
+        }
+
+        // 启动游戏
+        resetBall();
+        gameLoop();
+    </script>
+</body>
+
+</html>

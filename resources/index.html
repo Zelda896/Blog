@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  
+  <title itemprop="name">resources | 艾嘉蒂娅的二次元博客</title>
+  
+    <link rel="shortcut icon" href="/images/favicon.ico">
+  
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+SerifMerriweather|Merriweather+Sans|Source+Code+Pro|Ubuntu:400,700|Noto+Serif+SC" media="all">
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+  <link rel="stylesheet" id="saukra_css-css" href="/css/style.css" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/lib.min.css" media="all">
+  <link rel="stylesheet" href="/css/font.css" media="all">
+  <link rel="stylesheet" href="/css/insight.css" media="all">
+  <link rel="stylesheet" href="/css/jquery.fancybox.min.css" media="all">
+  <link rel="stylesheet" href="/css/zoom.css" media="all">
+  <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<!--   <link rel="stylesheet" id="saukra_css-css" href="https://2heng.xin/wp-content/cache/autoptimize/css/autoptimize_ad42a61f4c7d4bdd9f91afcff6b5dda5.css
+" type="text/css" media="all"> -->
+  <script>
+  /*Initial Variables*/
+  var mashiro_option = new Object();
+  var mashiro_global = new Object();
+  mashiro_option.NProgressON = true;
+  /* 
+   * 邮箱信息之类的东西可以填在这里，这些js变量基本都作用于sakura-app.js
+   * 这样的设置仅是为了方便在基于PHP开发的主题中设置js变量，既然移植到了Node上，我想或许可以精简这一逻辑吧
+   */
+  mashiro_option.email_domain = "";
+  mashiro_option.email_name = "";
+  mashiro_option.cookie_version_control = "";
+  mashiro_option.qzone_autocomplete = false;
+  mashiro_option.site_name = "ArcadiaのBlogs";
+  mashiro_option.author_name = "Blogs";
+  mashiro_option.site_url = "https://sakura.hojun.cn";
+  mashiro_option.v_appId = "GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHsz";
+  mashiro_option.v_appKey = "mgOpfzbkHYqU92CV4IDlAUHQ";
+  mashiro_option.mathjax = "0";
+  mashiro_option.qq_api_url = "https://api.mashiro.top/qqinfo/"; 
+  mashiro_option.qq_avatar_api_url = "https://api.mashiro.top/qqinfo/";
+
+  // mashiro_option.jsdelivr_css_src = "https://cdn.jsdelivr.net/gh/moezx/cdn@3.4.5/css/lib.min.css";
+  // mashiro_option.float_player_on = true;
+
+  /*End of Initial Variables*/
+  </script>
+  <script type="text/javascript">
+  var bg = "/images/1.jpg,/images/2.jpg,/images/3.jpg,/images/4.jpg,/images/5.jpg,/images/6.jpg".split(",");
+  var bgindex = Math.floor(Math.random()*bg.length);
+  if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
+    alert('朋友，IE浏览器未适配哦~');
+  }
+  </script>
+  <style type="text/css">
+  .hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}
+  </style>
+  <style type="text/css">.site-top .lower nav{display:block !important;}.author-profile i,.post-like a,.post-share .show-share,.sub-text,.we-info a,span.sitename,.post-more i:hover,#pagination a:hover,.post-content a:hover,.float-content i:hover{color:#FE9600}.feature i,.download,.navigator i:hover,.links ul li:before,.ar-time i,span.ar-circle,.object,.comment .comment-reply-link,.siren-checkbox-radio:checked + .siren-checkbox-radioInput:after{background:#FE9600}::-webkit-scrollbar-thumb{background:#FE9600}.download,.navigator i:hover,.link-title,.links ul li:hover,#pagination a:hover,.comment-respond input[type='submit']:hover{border-color:#FE9600}.entry-content a:hover,.site-info a:hover,.comment h4 a,#comments-navi a.prev,#comments-navi a.next,.comment h4 a:hover,.site-top ul li a:hover,.entry-title a:hover,#archives-temp h3,span.page-numbers.current,.sorry li a:hover,.site-title a:hover,i.iconfont.js-toggle-search.iconsearch:hover,.comment-respond input[type='submit']:hover{color:#FE9600}.comments .comments-main{display:block !important;}.comments .comments-hidden{display:none !important;}background-position:center center;background-attachment:inherit;}
+  </style>
+<meta name="generator" content="Hexo 8.1.1"></head>
+
+
+  <body
+    class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit">
+    <div class="scrollbar" id="bar">
+    </div>
+    <a href="#" class="cd-top faa-float animated"></a>
+    <section id="main-container">
+      <div class="headertop ">
+  <div id="banner_wave_1"></div>
+  <div id="banner_wave_2"></div>
+  <figure id="centerbg" class="centerbg">
+    <div class="focusinfo no-select">
+      <div class="header-tou">
+        <a target="_blank" rel="noopener" href="https://sakura.hojun.cn">
+          <img
+            src="https://cdn.jsdelivr.net/gh/Zelda896/CDN@1.1/touxiang.jpg">
+        </a>
+      </div>
+      <div class="header-info">
+        <p id="description-random">
+          坚持对每个人都很重要
+        </p>
+        <script>
+          (function () {
+            var quotes = [
+              " 每一个不曾起舞的日子，都是对生命的辜负",
+              "人生·工作的结果 = 思维方式 * 热情 * 能力",
+              "这就是命运石之门的选择",
+              "靡不有初 鲜克有终",
+              "行百里者半九十",
+              "承认自己的无知，方是开启智慧的大门",
+              "鸟为什么会飞",
+              "坚持对每个人都很重要"
+            ];
+            var randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+            document.getElementById('description-random').innerHTML = randomQuote;
+          })();
+        </script>
+        <div class="top-social_v2">
+          <li id="bg-pre">
+            <img class="flipx" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
+          </li>
+          
+            
+              
+                  <li>
+                    <a href="https://github.com/Zelda896" target="_blank" class="social-github" title="github">
+                      <img
+                        src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/social/github.png">
+                    </a>
+                  </li>
+                  
+                    
+              
+                  <li>
+                    <a href="https://weibo.com/u/5601370563" target="_blank" class="social-github" title="sina">
+                      <img
+                        src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/social/sina.png">
+                    </a>
+                  </li>
+                  
+                    
+              
+                  <li>
+                    <a href="https://music.163.com/#/user?id=1817648018" target="_blank" class="social-github" title="wangyiyun">
+                      <img
+                        src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/social/wangyiyun.png">
+                    </a>
+                  </li>
+                  
+                    
+              
+                  <li>
+                    <a href="https://www.zhihu.com/people/qu-mo-shi-jing-ke" target="_blank" class="social-github" title="zhihu">
+                      <img
+                        src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/social/zhihu.png">
+                    </a>
+                  </li>
+                  
+                    
+              
+                <li class="wechat">
+                  <a href="/#">
+                    <img
+                      src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/social/wechat.png">
+                  </a>
+                  <div class="wechatInner">
+                    <img
+                      src="https://cdn.jsdelivr.net/gh/Zelda896/CDN@1.1/Weixin.png">
+                  </div>
+                </li>
+                
+                    
+                      
+                        <li id="bg-next">
+                          <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
+                        </li>
+        </div>
+      </div>
+    </div>
+  </figure>
+  <div id="video-container" style="">
+    <video style="object-fit: fill" id="bgvideo" class="video" video-name="" src="" width="auto" preload="auto">
+    </video>
+    <div id="video-btn" class="loadvideo videolive">
+    </div>
+    <div id="video-add">
+    </div>
+    <div class="video-stu">
+    </div>
+  </div>
+  <div class="headertop-down faa-float animated" onclick="headertop_down()">
+    <span>
+      <i class="fa fa-chevron-down" aria-hidden="true">
+      </i>
+    </span>
+  </div>
+</div>
+        <div id="page" class="site wrapper">
+          <header class="site-header no-select gizle sabit" role="banner">
+  <div class="site-top">
+    <div class="site-branding">
+      <span class="site-title">
+        <span class="logolink moe-mashiro">
+          <a href="/">
+            <span class="sakurasono">Arcadiaの</span>
+            <span class="shironeko">Blogs</span>
+          </a>
+        </span>
+      </span>
+    </div>
+    <div class="searchbox search-form-submit">
+      <i class="iconfont js-toggle-search iconsearch icon-search">
+      </i>
+    </div>
+    <div id="show-nav" class="showNav mobile-fit">
+      <div class="line line1">
+      </div>
+      <div class="line line2">
+      </div>
+      <div class="line line3">
+      </div>
+    </div>
+    <div class="lower-cantiner">
+      <div class="lower">
+        <nav class="mobile-fit-control hide">
+          <ul id="menu-new" class="menu">
+            
+              <li>
+                <a href="/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+                    博客
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/projects/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-code faa-vertical" aria-hidden="true"></i>
+                    项目
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/resources/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-cloud-download faa-pulse" aria-hidden="true"></i>
+                    资源
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/docs/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-book faa-tada" aria-hidden="true"></i>
+                    文档共建
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/about/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-user faa-shake" aria-hidden="true"></i>
+                    关于
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/links/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+                    友人帐
+                  </span>
+                </a>
+                
+              </li>
+            
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+            <div class="pattern-center-blank"></div>
+
+    <div id="content" class="site-content">
+      <article class="post-item post-301 page type-page status-publish has-post-thumbnail hentry">
+        <h1 id="资源荟萃"><a href="#资源荟萃" class="headerlink" title="资源荟萃"></a>资源荟萃</h1><style>
+.resource-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.resource-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    border: 1px solid #eee;
+    transition: all 0.3s ease;
+    text-decoration: none !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.resource-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    border-color: #fe9600;
+}
+
+.resource-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.resource-desc {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+.magic-icon {
+    color: #fe9600;
+    font-size: 1.1rem;
+}
+
+.category-title {
+    margin-top: 40px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #fe9600;
+    display: inline-block;
+    font-size: 1.8rem;
+}
+
+.disclaimer-box {
+    background: #fffcf5;
+    border: 1px dashed #fe9600;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px 0;
+    color: #777;
+    font-size: 0.95rem;
+    line-height: 1.8;
+}
+
+.disclaimer-title {
+    color: #fe9600;
+    font-weight: bold;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.1rem;
+}
+</style>
+
+<div class="disclaimer-box">
+    <div class="disclaimer-title">📢 免责声明</div>
+    1. <b>资源性质</b>：本页面所列资源均收集自互联网，仅供学习交流及个人参考，严禁用于任何商业用途。<br>
+    2. <b>内容真实性</b>：博主对相关资源的真实性、准确性或完整性不作任何保证，请在访问时务必自行核实与甄别。<br>
+    3. <b>侵权处理</b>：本站致力于保护知识产权，如发现任何链接侵犯了您的合法权益，请立即通过 <a href="/about/">[关于我]</a> 页面中的联系方式联系博主，核实后我们将第一时间（24小时内）予以断开或删除。<br>
+    4. <b>依规使用</b>：请用户在遵守当地法律法规的前提下合法使用相关资源。
+</div>
+
+<p><font size="4">这里主要放一些链接，比如学习资源或者游戏资源之类的</font><br><font size="4">PS：<span class="magic-icon">✈</span> 代表需要使用魔法工具</font></p>
+<h2 class="category-title">📚 学习站</h2>
+
+<div class="resource-grid">
+    <a href="https://linux.do/" target="_blank" class="resource-card">
+        <div class="resource-title">L站 <span class="magic-icon">✈</span></div>
+        <div class="resource-desc">技术氛围极佳的综合性论坛，不仅有 Linux 知识，还有各种前沿技术分享和福利。</div>
+    </a>
+    <a href="https://www.cnblogs.com/" target="_blank" class="resource-card">
+        <div class="resource-title">博客园</div>
+        <div class="resource-desc">国内老牌的纯净技术博客社区，适合静下心来阅读深度技术文章。</div>
+    </a>
+    <a href="http://www.lvyestudy.com/" target="_blank" class="resource-card">
+        <div class="resource-title">绿叶学习网</div>
+        <div class="resource-desc">非常适合初学者的前端学习网站，图文并茂，通俗易懂。</div>
+    </a>
+    <a href="https://www.52pojie.cn/" target="_blank" class="resource-card">
+        <div class="resource-title">吾爱破解</div>
+        <div class="resource-desc">国内顶尖的反汇编与安全技术社区，是寻找各类实用精品软件的宝库。</div>
+    </a>
+    <a href="https://www.right.com.cn/forum/" target="_blank" class="resource-card">
+        <div class="resource-title">恩山无线论坛</div>
+        <div class="resource-desc">路由器刷机、折腾智能家居和各类网络硬件玩家的聚集地。</div>
+    </a>
+    <a href="https://docs.qq.com/doc/DRWVpZk1NVm1lTEZW" target="_blank" class="resource-card">
+        <div class="resource-title">米醋工作室资源</div>
+        <div class="resource-desc">汇集了大量设计、办公和学习方面的优质文档及资源合集。</div>
+    </a>
+</div>
+
+<h2 class="category-title">🔧 工具站</h2>
+
+<div class="resource-grid">
+    <a href="https://cook.yunyoujun.cn/" target="_blank" class="resource-card">
+        <div class="resource-title">饭饭站</div>
+        <div class="resource-desc">今天吃什么？一个帮你解决人生难题的超可爱做菜指南站。</div>
+    </a>
+    <a href="https://xdaforums.com/" target="_blank" class="resource-card">
+        <div class="resource-title">XDA论坛</div>
+        <div class="resource-desc">一个...以前收藏的论坛网站，主要讨论手机刷机之类的</div>
+    </a>
+    <a href="https://lkssite.vip/" target="_blank" class="resource-card">
+        <div class="resource-title">LKs网站推荐</div>
+        <div class="resource-desc">知名 B 站 UP 主 LKs 推荐的各类宝藏趣味网站合集。</div>
+    </a>
+    <a href="https://www.kdocs.cn/l/corXUSaAaKVM" target="_blank" class="resource-card">
+        <div class="resource-title">总站</div>
+        <div class="resource-desc">资源索引中心，通过金山文档汇总了极为丰富的内容导航。</div>
+    </a>
+    <a href="https://www.airportal.cn/" target="_blank" class="resource-card">
+        <div class="resource-title">小型文件空投网站</div>
+        <div class="resource-desc">极其方便的跨设备文件传输工具，像空投一样快速直接。</div>
+    </a>
+    <a href="https://www.imgurl.org/" target="_blank" class="resource-card">
+        <div class="resource-title">图片托管站</div>
+        <div class="resource-desc">高效稳定的图床工具，支持多种上传方式，适合存放博客图片。</div>
+    </a>
+    <a href="https://convert.freelrc.com/NCM-to-MP3" target="_blank" class="resource-card">
+        <div class="resource-title">ncm格式转换mp3</div>
+        <div class="resource-desc">网易云音乐专属格式在线转换工具，还你高清 MP3 旋律。</div>
+    </a>
+    <a href="https://convertio.co/zh/audio-converter/" target="_blank" class="resource-card">
+        <div class="resource-title">音频转换器</div>
+        <div class="resource-desc">万能的在线文件转换器，支持超过 300 种文件格式之间的转换。</div>
+    </a>
+    <a href="https://www.yishuzi.cn/" target="_blank" class="resource-card">
+        <div class="resource-title">艺术字转换器</div>
+        <div class="resource-desc">提供各种风格的艺术字展示和生成，是寻找排版灵感的好地方。</div>
+    </a>
+    <a href="https://xbeibeix.com/" target="_blank" class="resource-card">
+        <div class="resource-title">贝贝工具站</div>
+        <div class="resource-desc">集合了多种实用小工具，从视频解析到日常查询，功能丰富。</div>
+    </a>
+    <a href="https://www.haoweichi.com/" target="_blank" class="resource-card">
+        <div class="resource-title">各国身份地址生成器</div>
+        <div class="resource-desc">测试开发必备，可以快速生成符合格式的模拟虚拟身份信息。</div>
+    </a>
+</div>
+
+<h2 class="category-title">🎮 游戏资源</h2>
+
+<div class="resource-grid">
+    <a href="http://flysheep.ysepan.com/" target="_blank" class="resource-card">
+        <div class="resource-title">flysheep游戏资源避难所</div>
+        <div class="resource-desc">硬核玩家的网盘资源站，收录了许多不易寻找的经典游戏。</div>
+    </a>
+    <a href="https://steamzg.com/" target="_blank" class="resource-card">
+        <div class="resource-title">小叽游戏</div>
+        <div class="resource-desc">资源非常全面且更新及时的单机游戏分享平台。</div>
+    </a>
+    <a href="https://www.gamer520.com/" target="_blank" class="resource-card">
+        <div class="resource-title">Gamer520</div>
+        <div class="resource-desc">致力于分享各类高质量游戏的社区，界面简洁，资源纯净。</div>
+    </a>
+    <a href="https://byrutgame.org/" target="_blank" class="resource-card">
+        <div class="resource-title">毛子游戏网站</div>
+        <div class="resource-desc">来自俄罗斯的硬核游戏资源站，资源更新速度极快。</div>
+    </a>
+    <a href="https://www.oldmantvg.net/" target="_blank" class="resource-card">
+        <div class="resource-title">老男人游戏网</div>
+        <div class="resource-desc">主打怀旧掌机和家用机游戏的宝库，满载童年回忆的情怀站。</div>
+    </a>
+    <a href="https://sans.nyaasu.top/" target="_blank" class="resource-card">
+        <div class="resource-title">Sans战模拟器</div>
+        <div class="resource-desc">《传说之下》粉丝向的网页版战斗模拟器，挑战极限反应。</div>
+    </a>
+</div>
+
+<h2 class="category-title">🎬 影音资源</h2>
+
+<div class="resource-grid">
+    <a href="https://www.gequbao.com/" target="_blank" class="resource-card">
+        <div class="resource-title">歌曲宝</div>
+        <div class="resource-desc">超强大的全网音乐搜索与下载神器，找歌听歌的首选。</div>
+    </a>
+    <a href="https://sobooks.cc/" target="_blank" class="resource-card">
+        <div class="resource-title">SoBooks电子书下载</div>
+        <div class="resource-desc">高质量的电子书资源站，分类详尽，是读书人的精神粮仓。</div>
+    </a>
+</div>
+
+
+          <!-- .entry-content -->
+          
+<div id="vcomments"></div>
+<script>
+  window.onload = function(){
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        appId: "GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHsz",
+        appKey: "mgOpfzbkHYqU92CV4IDlAUHQ",
+        path: window.location.pathname,
+        placeholder: "你是我一生只会遇见一次的惊喜 ..."
+      })
+  }
+</script>
+
+
+
+
+            
+                <div style="text-align:center; width: 100%" class="social-share share-mobile"
+                  data-disabled="diandian, tencent">
+                </div>
+                <footer class="post-footer">
+                  <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"
+                      target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i>
+                      知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>
+                  </div>
+                  <div class="post-tags">
+                  </div>
+                  <div class="post-share">
+                    <div class="social-share sharehidden share-component"></div>
+                    <i class="iconfont show-share icon-forward"></i>
+                  </div>
+                </footer><!-- .entry-footer -->
+      </article>
+      <!-- #post-## -->
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+          <a href="/about/" class="profile gravatar"><img
+              src="https://cdn.jsdelivr.net/gh/Zelda896/CDN@1.1/touxiang.jpg"
+              itemprop="image" alt="Blogs" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+              <a target="_blank" href="https://sakura.hojun.cn" itemprop="url" rel="author noopener">Blogs</a>
+            </h3>
+          </div>
+        </div>
+        <hr>
+        <p><i class="iconfont icon-write"></i>坚持对每个人都很重要</p>
+      </section>
+    </div><!-- #primary -->
+    </div>
+        </div>
+        <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            // PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+          <!-- <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2026 艾嘉蒂娅<br>
+      powered_by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer> -->
+<footer id="colophon" class="site-footer" role="contentinfo">
+  <div class="site-info">
+    <div class="footertext">
+      <div class="img-preload">
+        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wordpress-rotating-ball-o.svg">
+        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/disqus-preloader.svg">
+      </div>
+      <p style="color: #666666;">&copy 2018</p>
+    </div>
+    <div class="footer-device">
+    <p style="font-family: 'Ubuntu', sans-serif;">
+        <span style="color: #b9b9b9;">Theme <a href="https://github.com/honjun/hexo-theme-sakura" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Sakura</a> <i class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></i> by <a href="https://2heng.xin/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Mashiro</a>&<a href="https://www.hojun.cn/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Hojun</a>, Powered by Hexo, Hosted by Coding Pages</a>
+        </span>
+      </p>
+    </div>
+  </div><!-- .site-info -->
+</footer>
+
+
+
+<!-- <script src="/js/tocbot.js"></script> -->
+<script type="text/javascript" src="/js/lib.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script type="text/javascript" src="/js/InsightSearch.js"></script>
+<script type="text/javascript" src="/js/jquery.fancybox.min.js"></script>
+<script type="text/javascript" src="/js/zoom.min.js"></script>
+<script type="text/javascript" src="/js/sakura-app.js"></script>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine@1.3.4/dist/Valine.min.js'></script>
+<script src="/js/botui.js"></script>
+<!-- 不蒜子 网页计数器 -->
+<script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script> -->
+<script type="text/javascript">
+/* <![CDATA[ */
+if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+  var Poi = {"pjax":"1","movies":{"url": "https://cdn.jsdelivr.net/gh/honjun/hojun@1.2","name":"Unbroken.mp4","live":"close"},"windowheight":"fixed","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+} else {
+  var Poi = {"pjax":"1","movies":{"url": "https://cdn.jsdelivr.net/gh/honjun/hojun@1.2","name":"Unbroken.mp4","live":"open"},"windowheight":"auto","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+}
+/* ]]> */
+
+</script>
+<script>
+$(document).ready(function() {
+  if ($(".toc").length > 0 && document.body.clientWidth > 1200) {
+    if ($(".pattern-center").length > 0) { //有图的情况
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -400,
+          scrollSmoothOffset: -85
+      });
+    } else {
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -85,
+          scrollSmoothOffset: -85
+      });
+    }
+    var offsetTop = $('.toc').offset().top - 95;
+    window.onscroll = function() {
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+      if (scrollTop >= offsetTop) {
+        $('.toc').addClass('toc-fixed');
+      } else {
+        $('.toc').removeClass('toc-fixed');
+      }
+    }
+  }
+});
+</script>
+
+            <div class="openNav no-select" style="height: 50px;">
+              <div class="iconflat no-select" style="width: 50px; height: 50px;">
+                <div class="icon"></div>
+              </div>
+              <div class="site-branding search-form-submit">
+                <i class="iconfont js-toggle-search iconsearch icon-search"></i>
+              </div>
+            </div>
+    </section>
+    <div id="mo-nav" class="">
+  <div class="m-avatar">
+    <img
+      src="https://cdn.jsdelivr.net/gh/Zelda896/CDN@1.1/touxiang.jpg">
+  </div>
+  <p
+    style="text-align: center; color: #333; font-weight: 900; font-family: 'Ubuntu', sans-serif; letter-spacing: 1.5px">
+    ArcadiaのBlogs</p>
+  <p style="text-align: center; word-spacing: 20px;">
+    
+      
+        <a href="https://github.com/Zelda896" class="fa fa-github" target="_blank"
+          style="color: #333; margin-left:20px"></a>
+        
+        <a href="https://weibo.com/u/5601370563" class="fa fa-weibo" target="_blank"
+          style="color: #dd4b39; margin-left:20px"></a>
+        
+        <a href="https://wpa.qq.com/msgrd?v=3&uin=954655431&site=qq&menu=yescuowulianjie" class="fa fa-qq" target="_blank"
+          style="color: #25c6fe; margin-left:20px"></a>
+        
+          
+  </p>
+  <ul id="menu-new-1" class="menu">
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+            博客
+          </span>
+        </a>
+        
+      </li>
+      
+      <li>
+        <a href="/projects/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-code faa-vertical" aria-hidden="true"></i>
+            项目
+          </span>
+        </a>
+        
+      </li>
+      
+      <li>
+        <a href="/resources/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-cloud-download faa-pulse" aria-hidden="true"></i>
+            资源
+          </span>
+        </a>
+        
+      </li>
+      
+      <li>
+        <a href="/docs/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-book faa-tada" aria-hidden="true"></i>
+            文档共建
+          </span>
+        </a>
+        
+      </li>
+      
+      <li>
+        <a href="/about/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-user faa-shake" aria-hidden="true"></i>
+            关于
+          </span>
+        </a>
+        
+      </li>
+      
+      <li>
+        <a href="/links/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+            友人帐
+          </span>
+        </a>
+        
+      </li>
+      
+  </ul>
+  <p style="text-align: center; font-size: 13px; color: #b9b9b9;">&copy 2019 hexo-sakura</p>
+</div>
+<button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i
+    class="fa fa-chevron-up" aria-hidden="true"></i></button>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+<!-- require MetingJS -->
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+<style>
+  .aplayer .aplayer-lrc {
+    height: 35px;
+  }
+  .aplayer .aplayer-lrc p{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px !important;
+  }
+  .aplayer .aplayer-lrc p.aplayer-lrc-current{
+    color: #FF1493;
+  }
+  .aplayer.aplayer-narrow .aplayer-body{
+    left: -66px !important;
+  }
+  .aplayer.aplayer-fixed .aplayer-lrc {
+    display: none;
+  }
+  .aplayer .aplayer-lrc.aplayer-lrc-hide {
+      display:none !important;
+  }
+  .aplayer.aplayer-fixed .lrc-show {
+    display: block;
+    background: rgba(255, 255, 255, 0.8);
+  }
+</style>
+<meting-js
+
+    id="2660651585"
+
+    server="netease"
+
+    type="playlist"
+
+    fixed="true"
+
+    autoplay="false"
+
+    loop="all"
+
+    order="random"
+
+    preload="auto"
+
+    volume="0.7"
+
+    mutex="true"
+
+</meting-js>
+<script>
+  $(function(){
+    $('body').on('click', '.aplayer', function(){
+      if($('.aplayer-button').hasClass('aplayer-play')) {
+        $('.aplayer-lrc').removeClass('lrc-show');
+      } else {
+        $('.aplayer-lrc').addClass('lrc-show');
+      }
+    })
+  });
+</script>
+        <script src="https://fastly.jsdelivr.net/npm/live2d-widgets@1.0.0/dist/autoload.js"></script>
+  </body>
+
+  </html>
