@@ -280,6 +280,33 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
 <div class="pattern-center-blank"></div>
 
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style="background-image: url(/images/7.jpg);"
+      src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="/images/7.jpg">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+        AI流程操作分析
+      </h1>
+      <p class="entry-census">
+        <span>
+          <a href="">
+            <img src="">
+          </a>
+        </span>
+        <span>
+          <a href=""></a>
+        </span>
+        <span class="bull">
+          ·</span>
+        2026-6-2<span class="bull">
+            ·</span>
+          <span id="busuanzi_value_page_pv"></span>次阅读
+      </p>
+    </header>
+  </div>
+  
     <div id="content" class="site-content">
       <div id="primary" class="content-area">
         <main id="main" class="site-main" role="main">
@@ -288,15 +315,6 @@
             <div class="toc"></div>
             <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
             
-              <header class="entry-header">
-                <h1 class="entry-title">AI流程操作分析</h1>
-                <p class="entry-census">&nbsp;·&nbsp;2026-6-2
-                      &nbsp;·&nbsp;<span id="busuanzi_value_page_pv"></span>次阅读</p>
-                </p>
-
-                <hr>
-              </header>
-              
                 <div class="entry-content">
                   <p>推荐阅读文章：<a target="_blank" rel="noopener" href="https://datawhalechina.github.io/easy-vibe/zh-cn/stage-1/ai-capabilities-through-games/">初级一：AI 时代，会说话就会编程 | Easy-Vibe 教程</a></p>
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在2026年，AI工具的使用已经相当普遍，但其进化速度过快。对于电子信息工程专业的同学来说，不可避免会出现对AI工具使用产生误区的情况。本文的目的在于纠正那些”习以为常，不曾在意”的误区，帮助新手同学更好地利用AI工具。</p>
@@ -421,7 +439,7 @@
     <div class="ins-search-mask"></div>
     <div class="ins-search-container">
         <div class="ins-input-wrapper">
-            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
+            <input type="text" class="ins-search-input" placeholder="Type something..."/>
             <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
         </div>
         <div class="ins-section-wrapper">
@@ -433,10 +451,10 @@
 (function (window) {
     var INSIGHT_CONFIG = {
         TRANSLATION: {
-            POSTS: '文章',
-            // PAGES: '页面',
-            CATEGORIES: '分类',
-            TAGS: '标签',
+            POSTS: 'Posts',
+            // PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
         },
         ROOT_URL: '/',
         CONTENT_URL: '/content.json',
